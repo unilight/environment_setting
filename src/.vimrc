@@ -27,6 +27,8 @@ Plugin 'octol/vim-cpp-enhanced-highlight'
 
 " theme
 Plugin 'tomasr/molokai'
+Plugin 'dracula/vim'
+Plugin 'ajmwagar/vim-deus'
 
 call vundle#end()
 filetype plugin indent on     " required
@@ -68,8 +70,11 @@ set showtabline=2
 set t_Co=256
 syntax on
 
-colorscheme molokai
+"colorscheme molokai
+"colorscheme dracula
 "colorscheme solarized
+colorscheme deus
+
 set background=dark	" another is 'light'
 "set background=light
 "let g:molokai_original = 1
@@ -81,7 +86,7 @@ let g:airline_theme="lucius"
 
 set cursorline
 set mouse=a
-autocmd filetype python setlocal colorcolumn=80
+"autocmd filetype python setlocal colorcolumn=80
 
 " CTRL-C and CTRL-Insert are Copy
 vnoremap <C-C> "+y
@@ -109,9 +114,9 @@ set nocompatible
 set wildmenu
 set backupdir=~/tmp,.,/var/tmp/vi.recover,/tmp
 set directory=~/tmp,/var/tmp/vi.recover,/tmp,.
-set backup		" keep a backup file
+" set backup		" keep a backup file
 " set textwidth=78
-" set shiftwidth=4
+set shiftwidth=4
 set bs=2		" allow backspacing over everything in insert mode
 set ai			" always set autoindenting on
 set viminfo='20,\"50	" read/write a .viminfo file, don't store more
@@ -119,9 +124,11 @@ set showmatch
 set nu
 set ts=4
 set shiftwidth=4
-set softtabstop=4
+set tabstop=4
+set softtabstop=0
 set hlsearch
 set expandtab
+nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>
 
 " VIM 6.0,
 if version >= 600
@@ -175,3 +182,4 @@ end
 
 " Crontabs must be edited in place
 au BufRead /tmp/crontab* :set backupcopy=yes
+set term=screen-256color
