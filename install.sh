@@ -60,13 +60,11 @@ if [ ! -d ~/.vim/bundle/Vundle.vim ]; then
 fi
 vim +PluginInstall +qall
 
-# Setup pyenv
+# Install miniconda
 if [ ! -d ~/.pyenv ]; then
-    git clone https://github.com/yyuu/pyenv.git ~/.pyenv
-fi
-
-if [ ! -d ~/.pyenv/plugins/pyenv-virtualenv ]; then
-    git clone https://github.com/yyuu/pyenv-virtualenv.git ~/.pyenv/plugins/pyenv-virtualenv
+    wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh
+    bash Miniconda3-latest-Linux-x86_64.sh
+    conda create -n py36 python=3.6
 fi
 
 echo "${GREEN}Installation is complete${NORMAL}"
