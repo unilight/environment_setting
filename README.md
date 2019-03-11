@@ -15,4 +15,4 @@ make install
 Credits
 -------
 
-This script is written by Kuen-Han Tsai
+This script is written by Kuen-Han Tsai, modified by Wen-Chin Huang
