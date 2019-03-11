@@ -110,7 +110,6 @@ exe 'vnoremap <script> <C-V>' paste#paste_cmd['v']
 imap <S-Insert> <C-V>
 vmap <S-Insert> <C-V>
 
-<<<<<<< HEAD
 set nocompatible
 set wildmenu
 set backupdir=~/tmp,.,/var/tmp/vi.recover,/tmp
